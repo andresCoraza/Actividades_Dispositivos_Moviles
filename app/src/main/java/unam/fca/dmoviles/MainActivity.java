@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.View;
+import java.time.LocalDateTime;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         //Para hacer referencia a un componente del layout, utilizamos el metodo findViewById
         //y le pasamos como parametro el id correspondiente.
 
-        final TextView tv = findViewById(R.id.btn);
+        final TextView tv = findViewById(R.id.tv);
 
         final Button btn = findViewById(R.id.btn);
 
@@ -33,7 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
         //Actividades
         //a) Agrega un evento  setOnClickListener al boton como viene en la referencia
+        btn.setOnClickListener(new View.OnClickListener() {
         //b) El el metodo onClick, modifica el texto de tv para que muestre la fecha actual con LocalDateTime.now().ToString()
+            public void onClick(View v) {
+                tv.setText(LocalDateTime.now().toString());
+            }
+        });
         //c) Sube tu codigo al repositorio.
         //d) Sube un documento en word a la plataforma Moodle con las capturas de pantalla de tu actividad. Incluye la liga a tu repositorio
 

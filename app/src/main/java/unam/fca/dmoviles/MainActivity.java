@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Actividades
         //a) Modifica el texto "Hola mundo", pon tu nombre y ejecuta la aplicacion
+        tv.setText("Andrés Alejandro Coraza Gaytán");
         //b) Crea una entrada en la carpeta res/values/strings.xml con tu numero de cuenta
         //c) modifica setText para que lea esta entrada de texto (Tip, puedes hacer referencia al texto con R.string.<id entrada>)
+        tv.setText(R.string.cuenta);
         //d) Ejecuta la aplicacion
         //e) Sube tu codigo al repositorio.
         //f) Sube un documento en word a la plataforma Moodle con las capturas de pantalla de tu actividad. Incluye la liga a tu repositorio

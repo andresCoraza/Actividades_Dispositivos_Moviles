@@ -1,5 +1,6 @@
 package unam.fca.dmoviles;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,8 +16,11 @@ public class SegundaActividad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda_actividad);
 
-        TextView tv = findViewById(R.id.tv);
+        Intent intent = getIntent();
+        String msj = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
+        TextView tv = findViewById(R.id.tv);
+        tv.setText(msj);
     }
 
 }

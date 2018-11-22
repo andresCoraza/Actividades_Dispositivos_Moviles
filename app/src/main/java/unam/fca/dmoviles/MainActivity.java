@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         String type = intent.getType();
 
         final ImageView iv = findViewById(R.id.iv);
-
+        //iv.setScaleType(ImageView.ScaleType.CENTER);
 
         //Cuando nuestra aplicacion sea iniciada por otra  aplicacion, type no sera nulo
         if (Intent.ACTION_SEND.equals(action) && type != null) {
